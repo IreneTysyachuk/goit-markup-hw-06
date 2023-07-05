@@ -28,6 +28,15 @@
           <a class="header-logo link" href="./index.html"
             >Web<span class="header-logo-dark">Studio</span>
           </a>
+          <button
+            type="button"
+            class="header-toggle js-open-menu"
+            aria-expanded="false"
+          >
+            <svg class="header-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-menu-hamburger"></use>
+            </svg>
+          </button>
           <ul class="header-menu list">
             <li class="header-menu-item">
               <a class="header-menu-link link current" href="./index.html"
@@ -61,12 +70,93 @@
           </ul>
         </address>
       </div>
+      <div class="header-mob js-menu-container" id="mobile-menu">
+        <button
+          class="header-mob-btn js-close-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="modal-btn-closed" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <div class="mob-wrap">
+          <nav class="mob-navigation">
+            <ul class="mob-menu list">
+              <li class="mob-menu-item">
+                <a class="mob-menu-link link current" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link link" href="./portfolio.html"
+                  >Portfolio
+                </a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mob-contacts">
+            <address class="mob-adress">
+              <ul class="mob-adress-list list">
+                <li class="mob-adress-item">
+                  <a class="mob-adress-tel link" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mob-adress-item">
+                  <a
+                    class="mob-adress-mail link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <div class="mob-media">
+              <ul class="mob-media-list list">
+                <li class="mob-media-item">
+                  <a class="mob-link link" href="">
+                    <svg class="mob-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mob-media-item">
+                  <a class="mob-link link" href="">
+                    <svg class="mob-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mob-media-item">
+                  <a class="mob-link link" href="">
+                    <svg class="mob-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="mob-media-item">
+                  <a class="mob-link link" href="">
+                    <svg class="mob-icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero-title">Effective Solutions for Your Business</h1>
+          <h1 class="hero-title">Effective Solutions For Your Business</h1>
           <button class="hero-btn" type="button" data-modal-open>
             Order Service
           </button>
@@ -136,6 +226,7 @@
             <li class="doings-item">
               <img
                 class="doings-img"
+                srcset="./images/img_1.jpg 1x, ./images/img_1@2x.jpg 2x"
                 src="./images/img_1.jpg"
                 alt="monitor screen"
                 width="360"
@@ -145,6 +236,7 @@
             <li class="doings-item">
               <img
                 class="doings-img"
+                srcset="./images/img_2.jpg 1x, ./images/img_2@2x.jpg 2x"
                 src="./images/img_2.jpg"
                 alt="smartphone screens"
                 width="360"
@@ -154,6 +246,7 @@
             <li class="doings-item">
               <img
                 class="doings-img"
+                srcset="./images/img_3.jpg 1x, ./images/img_3@2x.jpg 2x"
                 src="./images/img_3.jpg"
                 alt="smartphone in hand"
                 width="360"
@@ -171,6 +264,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/photo_1.jpg 1x, ./images/photo_1@2x.jpg 2x"
                 src="./images/photo_1.jpg"
                 alt="photo of Mark Guerrero"
                 width="264"
@@ -214,6 +308,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/photo_2.jpg 1x, ./images/photo_2@2x.jpg 2x"
                 src="./images/photo_2.jpg"
                 alt="photo of Tom Ford"
                 width="264"
@@ -257,6 +352,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/photo_3.jpg 1x, ./images/photo_3@2x.jpg 2x"
                 src="./images/photo_3.jpg"
                 alt="photo of Camila Garcia"
                 width="264"
@@ -300,6 +396,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/photo_4.jpg 1x, ./images/photo_4@2x.jpg 2x"
                 src="./images/photo_4.jpg"
                 alt="photo of Daniel Wilson"
                 width="264"
@@ -547,5 +644,12 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
