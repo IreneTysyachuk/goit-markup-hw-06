@@ -810,13 +810,14 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -10%) scale(1);
   width: 300px;
   min-height: 584px;
   padding: 72px 24px 24px 24px;
@@ -1452,5 +1453,10 @@ img {
 
   .portfolio-cards-item {
     width: calc((100% - 48px) / 3);
+  }
+
+  .modal {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
